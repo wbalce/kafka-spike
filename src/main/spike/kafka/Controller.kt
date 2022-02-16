@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller(private val service: Service, private val consumer: Consumer) {
+class Controller(private val producer: Producer, private val consumer: Consumer) {
 
     @PostMapping("publish/{message}")
     fun getAction(@PathVariable message: String) {
-        service.sendMessage(message)
+        producer.sendMessage(message)
     }
 }
 

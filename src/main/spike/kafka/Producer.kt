@@ -7,7 +7,7 @@ import org.springframework.kafka.support.SendResult
 import org.springframework.stereotype.Component
 
 @Component
-open class Service(private val kafkaTemplate: KafkaTemplate<String, String>) {
+open class Producer(private val kafkaTemplate: KafkaTemplate<String, String>) {
     val topicName = "my-topic-name"
 
     open fun sendMessage(message: String) {
