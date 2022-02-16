@@ -25,7 +25,7 @@ open class Service(private val kafkaTemplate: KafkaTemplate<String, String>) {
                 println(
                     """
                         ============================================================
-                        Unsuccessfully published message '$message' to topic '$topicName'
+                        Unsuccessfully published message to topic '$topicName'
                         ============================================================
                     """.trimIndent()
                 )
